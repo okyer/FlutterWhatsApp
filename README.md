@@ -39,3 +39,17 @@ Building a WhatsApp Clone in Flutter.
 
 For help getting started with Flutter, view our online
 [documentation](https://flutter.io/).
+
+---
+
+# changelog
+
+flutter --version
+Flutter 3.38.3 • channel stable • https://github.com/flutter/flutter.git
+Framework • revision 19074d12f7 (5 days ago) • 2025-11-20 17:53:13 -0500
+Engine • hash 8bf2090718fea3655f466049a757f823898f0ad1 (revision 13e658725d) (5 days ago) • 2025-11-20 20:19:23.000Z
+Tools • Dart 3.10.1 • DevTools 2.51.1
+
+1. 空安全改造。
+
+

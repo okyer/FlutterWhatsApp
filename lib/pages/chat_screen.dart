@@ -22,17 +22,17 @@ class ChatScreenState extends State<ChatScreen> {
                 leading: new CircleAvatar(
                   foregroundColor: Theme.of(context).primaryColor,
                   backgroundColor: Colors.grey,
-                  backgroundImage: new NetworkImage(dummyData[i].avatarUrl),
+                  backgroundImage: new NetworkImage(dummyData[i].avatarUrl!),
                 ),
                 title: new Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     new Text(
-                      dummyData[i].name,
+                      dummyData[i].name!,
                       style: new TextStyle(fontWeight: FontWeight.bold),
                     ),
                     new Text(
-                      dummyData[i].time,
+                      dummyData[i].time!,
                       style: new TextStyle(color: Colors.grey, fontSize: 14.0),
                     ),
                   ],
@@ -40,7 +40,7 @@ class ChatScreenState extends State<ChatScreen> {
                 subtitle: new Container(
                   padding: const EdgeInsets.only(top: 5.0),
                   child: new Text(
-                    dummyData[i].message,
+                    dummyData[i].message!,
                     style: new TextStyle(color: Colors.grey, fontSize: 15.0),
                   ),
                 ),

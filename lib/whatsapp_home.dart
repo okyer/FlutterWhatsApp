@@ -7,7 +7,7 @@ import 'package:flutterwhatsapp/pages/status_screen.dart';
 
 class WhatsAppHome extends StatefulWidget {
   final List<CameraDescription> cameras;
-  WhatsAppHome({this.cameras});
+  WhatsAppHome({required this.cameras});
 
   @override
   _WhatsAppHomeState createState() => _WhatsAppHomeState();
@@ -15,7 +15,7 @@ class WhatsAppHome extends StatefulWidget {
 
 class _WhatsAppHomeState extends State<WhatsAppHome>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
   bool showFab = true;
 
   @override
@@ -23,8 +23,8 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
     super.initState();
 
     _tabController = TabController(vsync: this, initialIndex: 1, length: 4);
-    _tabController.addListener(() {
-      if (_tabController.index == 1) {
+    _tabController?.addListener(() {
+      if (_tabController?.index == 1) {
         showFab = true;
       } else {
         showFab = false;
@@ -72,7 +72,7 @@ class _WhatsAppHomeState extends State<WhatsAppHome>
       ),
       floatingActionButton: showFab
           ? FloatingActionButton(
-              backgroundColor: Theme.of(context).accentColor,
+              backgroundColor: Theme.of(context).colorScheme.secondary,
               child: Icon(
                 Icons.message,
                 color: Colors.white,
